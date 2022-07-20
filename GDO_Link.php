@@ -61,7 +61,7 @@ final class GDO_Link extends GDO
 	/**
 	 * @return GDO_User
 	 */
-	public function getCreator() { return $this->getValue('link_created_by'); }
+	public function getCreator() { return $this->gdoValue('link_created_by'); }
 	public function getCreatorID() { return $this->gdoVar('link_created_by'); }
 	public function getCreated() { return $this->gdoVar('link_created_at'); }
 	
