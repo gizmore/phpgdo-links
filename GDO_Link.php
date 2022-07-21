@@ -88,7 +88,7 @@ final class GDO_Link extends GDO
 	##############
 	### Render ###
 	##############
-	public function renderList() { return GDT_Template::php('Links', 'listitem/link.php', ['link'=>$this]); }
+	public function renderList() : string { return GDT_Template::php('Links', 'listitem/link.php', ['link'=>$this]); }
 	
 	###########
 	### All ###
