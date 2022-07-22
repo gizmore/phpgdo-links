@@ -12,9 +12,9 @@ use GDO\Tag\WithTags;
 use GDO\Core\GDT_Template;
 use GDO\User\GDT_Level;
 use GDO\User\GDO_User;
-use GDO\Vote\GDT_VoteCount;
-use GDO\Vote\GDT_VoteRating;
-use GDO\Vote\WithVotes;
+use GDO\Votes\GDT_VoteCount;
+use GDO\Votes\GDT_VoteRating;
+use GDO\Votes\WithVotes;
 use GDO\DB\Cache;
 use GDO\Core\GDT_UInt;
 

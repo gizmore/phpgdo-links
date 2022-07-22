@@ -1,7 +1,7 @@
 <?php
 namespace GDO\Links;
 
-use GDO\Vote\GDO_VoteTable;
+use GDO\Votes\GDO_VoteTable;
 
 final class GDO_LinkVote extends GDO_VoteTable
 {
