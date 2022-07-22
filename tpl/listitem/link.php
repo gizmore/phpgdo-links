@@ -19,8 +19,8 @@ $li->subtext(GDT_Container::make()->addFields(
     GDT_Badge::make()->value(t('link_views', [$link->getViews()])),
 ));
 
-$li->actions()->addFields(array(
+$li->actions()->addFields(
 	GDT_Button::make('btn_view')->disabled(!$link->canView())->href($link->href_visit())->icon('view'),
-));
+);
 
 echo $li->render();

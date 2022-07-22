@@ -63,6 +63,6 @@ final class Add extends MethodForm
 		$link->updateTags($form->getField('tags')->getValue());
 		GDO_Link::recacheCounter();
 		$href = href('Links', 'Overview');
-		return Website::redirectMessage('msg_link_added', null, $href);
+		return $this->redirectMessage('msg_link_added', null, $href);
 	}
 }
