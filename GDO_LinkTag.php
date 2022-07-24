@@ -1,7 +1,7 @@
 <?php
 namespace GDO\Links;
 
-use GDO\Tag\GDO_TagTable;
+use GDO\Tags\GDO_TagTable;
 
 final class GDO_LinkTag extends GDO_TagTable
 {

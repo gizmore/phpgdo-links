@@ -1,7 +1,7 @@
 <?php /** @var $link \GDO\Links\GDO_Link **/
 use GDO\Votes\GDT_VoteSelection;
 use GDO\Votes\GDT_VoteRating;
-use GDO\UI\GDT_ListItem;
+use GDO\Table\GDT_ListItem;
 use GDO\UI\GDT_Container;
 use GDO\UI\GDT_Button;
 use GDO\Votes\GDT_VoteCount;

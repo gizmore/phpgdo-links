@@ -23,6 +23,6 @@ final class Visit extends Method
 		
 		$link->increase('link_views');
 		
-		return Website::redirect($link->getURL());
+		return $this->redirect($link->getURL());
 	}
 }

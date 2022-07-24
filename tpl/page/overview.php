@@ -2,7 +2,7 @@
 use GDO\Links\GDO_Link;
 use GDO\Links\Module_Links;
 use GDO\Table\GDT_List;
-use GDO\Tag\GDT_TagCloud;
+use GDO\Tags\GDT_TagCloud;
 use GDO\User\GDO_User;
 use GDO\Core\Debug;
 

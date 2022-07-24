@@ -8,7 +8,7 @@ use GDO\Form\MethodForm;
 use GDO\Links\GDO_Link;
 use GDO\Links\Module_Links;
 use GDO\User\GDO_User;
-use GDO\Tag\GDT_Tags;
+use GDO\Tags\GDT_Tags;
 use GDO\Core\Website;
 use GDO\Core\GDT_Response;
 
