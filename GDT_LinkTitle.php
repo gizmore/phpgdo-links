@@ -21,7 +21,7 @@ final class GDT_LinkTitle extends GDT_Title
 		$this->notNull();
 	}
 	
-	public function renderCell() : string
+	public function renderHTML() : string
 	{
 		return GDT_Template::php('Links', 'cell_link_title.php', ['link'=>$this->gdo, 'field'=>$this]);
 	}

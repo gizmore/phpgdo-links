@@ -15,7 +15,7 @@ final class GDT_LinkUrl extends GDT_Url
 		$this->unique();
 	}
 	
-	public function renderCell() : string
+	public function renderHTML() : string
 	{
 		return GDT_Template::php('Links', 'cell_link_url.php', ['link'=>$this->gdo, 'field'=>$this]);
 	}
