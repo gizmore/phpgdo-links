@@ -18,7 +18,7 @@ use GDO\UI\GDT_Page;
  */
 final class Module_Links extends GDO_Module
 {
-	public function getDependencies() : array { return ['Votes', 'Tag', 'Cronjob']; }
+	public function getDependencies() : array { return ['Votes', 'Tags', 'Cronjob']; }
 	public function getClasses() : array { return [GDO_Link::class, GDO_LinkTag::class, GDO_LinkVote::class]; }
 	public function onLoadLanguage() : void { $this->loadLanguage('lang/links'); }
 	
