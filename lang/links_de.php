@@ -29,4 +29,6 @@ return array(
 'cfg_cfg_links_votes' => 'Voting',
 'cfg_link_votes_outcome' => 'Anzahl votes bis voting erscheint',
 'cfg_link_guest_votes' => 'Gast-Votes erlauben?',
+
+	'mt_links_visit' => 'Visit Link',
 );
