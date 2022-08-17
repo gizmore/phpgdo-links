@@ -95,7 +95,7 @@ final class GDO_Link extends GDO
 	###########
 	public static function getCounter()
 	{
-	    if (false === ($count = Cache::get('gdo_link_count')))
+	    if (null === ($count = Cache::get('gdo_link_count')))
 	    {
 	        $count = self::table()->countWhere();
 	        Cache::set('gdo_link_count', $count);
