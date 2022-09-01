@@ -37,7 +37,7 @@ final class Add extends MethodForm
 		$form->addField(GDT_AntiCSRF::make());
 	}
 	
-	public function beforeExecute() : void
+	public function onRenderTabs() : void
 	{
 	    Module_Links::instance()->renderTabs();
 	}

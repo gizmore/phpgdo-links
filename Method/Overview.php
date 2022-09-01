@@ -7,7 +7,7 @@ use GDO\UI\GDT_Page;
 
 final class Overview extends MethodPage
 {
-    public function beforeExecute() : void
+    public function onRenderTabs() : void
     {
          Module_Links::instance()->renderTabs();
     }
