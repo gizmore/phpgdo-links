@@ -64,7 +64,7 @@ final class Module_Links extends GDO_Module
 	#################
 	public function renderTabs()
 	{
-		GDT_Page::$INSTANCE->topBar()->addField(
+		GDT_Page::instance()->topBar()->addField(
 		    $this->templatePHP('tabs.php'));
 	}
 	
