@@ -1,4 +1,5 @@
 <?php
+namespace GDO\Links\tpl;
 use GDO\UI\GDT_Bar;
 use GDO\UI\GDT_Link;
 use GDO\Links\GDO_Link;
