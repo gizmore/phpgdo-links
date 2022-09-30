@@ -77,7 +77,7 @@ final class Module_Links extends GDO_Module
 	    {
 	        $count = GDO_Link::table()->getCounter();
 	        $navbar = GDT_Page::instance()->leftBar();
-	        $navbar->addField(GDT_Link::make()->label('link_links', [$count])->
+	        $navbar->addField(GDT_Link::make()->text('link_links', [$count])->
 	            href(href('Links', 'Overview')));
 	    }
 	}
