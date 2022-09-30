@@ -64,7 +64,7 @@ final class Module_Links extends GDO_Module
 	#################
 	public function renderTabs()
 	{
-		GDT_Page::instance()->topBar()->addField(
+		GDT_Page::instance()->topResponse()->addField(
 		    $this->templatePHP('tabs.php'));
 	}
 	
@@ -78,7 +78,7 @@ final class Module_Links extends GDO_Module
 	        $count = GDO_Link::table()->getCounter();
 	        $navbar = GDT_Page::instance()->leftBar();
 	        $navbar->addField(GDT_Link::make()->text('link_links', [$count])->
-	            href(href('Links', 'Overview')));
+	            href(href('Links', 'Overview'))->icon('url'));
 	    }
 	}
 	
