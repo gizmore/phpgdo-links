@@ -2,6 +2,7 @@
 namespace GDO\Links;
 
 use GDO\Net\GDT_Url;
+use GDO\Core\GDT;
 use GDO\Core\GDT_Template;
 use GDO\Core\WithGDO;
 
@@ -20,7 +21,14 @@ final class GDT_LinkUrl extends GDT_Url
 	
 	public function renderHTML() : string
 	{
-		return GDT_Template::php('Links', 'cell_link_url.php', ['link'=>$this->gdo, 'field'=>$this]);
+		if (isset($this->gdo))
+		{
+			return GDT_Template::php('Links', 'cell_link_url.php', [
+				'field' => $this,
+				'link' => $this->gdo,
+			]);
+		}
+		return GDT::EMPTY_STRING;
 	}
 
 }
