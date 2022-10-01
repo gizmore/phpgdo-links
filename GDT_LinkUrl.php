@@ -3,9 +3,12 @@ namespace GDO\Links;
 
 use GDO\Net\GDT_Url;
 use GDO\Core\GDT_Template;
+use GDO\Core\WithGDO;
 
 final class GDT_LinkUrl extends GDT_Url
 {
+	use WithGDO;
+	
 	protected function __construct()
 	{
 	    parent::__construct();

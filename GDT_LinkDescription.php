@@ -3,6 +3,7 @@ namespace GDO\Links;
 
 use GDO\Core\GDT_Template;
 use GDO\UI\GDT_Message;
+use GDO\Core\WithGDO;
 
 /**
  * Display the title of a link, or the censored message.
@@ -11,6 +12,8 @@ use GDO\UI\GDT_Message;
  */
 final class GDT_LinkDescription extends GDT_Message
 {
+	use WithGDO;
+	
 	public function defaultLabel() : self { return $this->label('description'); }
 
 	protected function __construct()
