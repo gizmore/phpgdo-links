@@ -14,6 +14,8 @@ final class GDT_LinkDescription extends GDT_Message
 {
 	use WithGDO;
 	
+	public function isTestable() : bool { return false; }
+	
 	public function defaultLabel() : self { return $this->label('description'); }
 
 	protected function __construct()
