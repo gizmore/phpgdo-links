@@ -31,4 +31,16 @@ final class GDT_LinkUrl extends GDT_Url
 		return GDT::EMPTY_STRING;
 	}
 
+	private static int $PLUG_CNT = 0;
+	/**
+	 * Adding links needs unique urls.
+	 */
+	public function plugVars(): array
+	{
+		$count = ++self::$PLUG_CNT;
+		return [
+			[$this->getName() => "https://www.wechall.net/index.php?v={$count}"],
+		];
+	}
+	
 }

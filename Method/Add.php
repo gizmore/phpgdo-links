@@ -23,7 +23,7 @@ final class Add extends MethodForm
 		$form->addField(GDT_Tags::make('tags')->tagtable($table->gdoTagTable()));
 		$form->addField($table->gdoColumn('link_lang')->initial(GDO_LANGUAGE));
 		$form->addField($table->gdoColumn('link_title'));
-		$form->addField($table->gdoColumn('link_url'));
+		$form->addField($table->gdoColumn('link_url')->gdo($table));
 		if ($module->cfgDescriptions())
 		{
 			$form->addField($table->gdoColumn('link_description'));
