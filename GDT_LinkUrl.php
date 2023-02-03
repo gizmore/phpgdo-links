@@ -14,7 +14,7 @@ final class GDT_LinkUrl extends GDT_Url
 	{
 	    parent::__construct();
 		$this->reachable = true;
-		$this->allowLocal = true;
+		$this->allowInternal = true;
 		$this->notNull();
 		$this->unique();
 	}
