@@ -16,7 +16,7 @@ final class GDT_LinkDescription extends GDT_Message
 	
 	public function isTestable() : bool { return false; }
 	
-	public function defaultLabel() : self { return $this->label('description'); }
+	public function defaultLabel(): static { return $this->label('description'); }
 
 	protected function __construct()
 	{
