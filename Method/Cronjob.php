@@ -5,13 +5,12 @@ use GDO\Cronjob\MethodCronjob;
 
 final class Cronjob extends MethodCronjob
 {
+
 	public function run()
 	{
 		$this->checkDeadLinks();
 	}
-	
-	private function checkDeadLinks()
-	{
-		
-	}
+
+	private function checkDeadLinks() {}
+
 }

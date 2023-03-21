@@ -6,9 +6,10 @@ use GDO\UI\MethodPage;
 
 final class Overview extends MethodPage
 {
-    public function onRenderTabs() : void
-    {
-         Module_Links::instance()->renderTabs();
-    }
-	
+
+	public function onRenderTabs(): void
+	{
+		Module_Links::instance()->renderTabs();
+	}
+
 }

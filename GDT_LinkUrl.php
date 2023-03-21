@@ -1,25 +1,28 @@
 <?php
 namespace GDO\Links;
 
-use GDO\Net\GDT_Url;
 use GDO\Core\GDT;
 use GDO\Core\GDT_Template;
 use GDO\Core\WithGDO;
+use GDO\Net\GDT_Url;
 
 final class GDT_LinkUrl extends GDT_Url
 {
+
 	use WithGDO;
-	
+
+	private static int $PLUG_CNT = 0;
+
 	protected function __construct()
 	{
-	    parent::__construct();
+		parent::__construct();
 		$this->reachable = true;
 		$this->allowInternal = true;
 		$this->notNull();
 		$this->unique();
 	}
-	
-	public function renderHTML() : string
+
+	public function renderHTML(): string
 	{
 		if (isset($this->gdo))
 		{
@@ -31,7 +34,6 @@ final class GDT_LinkUrl extends GDT_Url
 		return GDT::EMPTY_STRING;
 	}
 
-	private static int $PLUG_CNT = 0;
 	/**
 	 * Adding links needs unique urls.
 	 */
@@ -42,5 +44,5 @@ final class GDT_LinkUrl extends GDT_Url
 			[$this->getName() => "https://www.wechall.net/index.php?v={$count}"],
 		];
 	}
-	
+
 }
