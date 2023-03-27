@@ -1,6 +1,7 @@
 <?php
 namespace GDO\Links\Method;
 
+use GDO\Core\GDT;
 use GDO\Core\GDT_Object;
 use GDO\Core\Method;
 use GDO\Links\GDO_Link;
@@ -22,7 +23,7 @@ final class Visit extends Method
 		];
 	}
 
-	public function execute()
+	public function execute(): GDT
 	{
 		$link = $this->getLink();
 		$user = GDO_User::current();

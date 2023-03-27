@@ -1,6 +1,7 @@
 <?php
 namespace GDO\Links\Method;
 
+use GDO\Core\GDT;
 use GDO\Core\GDT_Response;
 use GDO\Form\GDT_AntiCSRF;
 use GDO\Form\GDT_Form;
@@ -42,7 +43,7 @@ final class Add extends MethodForm
 		Module_Links::instance()->renderTabs();
 	}
 
-	public function execute()
+	public function execute(): GDT
 	{
 		$response = GDT_Response::makeWith($this->renderInfoBox());
 		if (Module_Links::instance()->cfgAllowed(GDO_User::current()))
@@ -57,7 +58,7 @@ final class Add extends MethodForm
 		return $this->templatePHP('add_info.php');
 	}
 
-	public function formValidated(GDT_Form $form)
+	public function formValidated(GDT_Form $form): GDT
 	{
 		$link = GDO_Link::blank()->setVars($form->getFormVars())->insert();
 		$link->updateTags($form->getField('tags')->getValue());
