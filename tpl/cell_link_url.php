@@ -1,10 +1,11 @@
 <?php
+declare(strict_types=1);
 namespace GDO\Links\tpl;
 
 use GDO\Links\GDO_Link;
 use GDO\User\GDO_User;
 
-/** @var $link GDO_Link * */
+/** @var GDO_Link $link * */
 $user = GDO_User::current();
 $level = $link->getLevel();
 if ($level > $user->getLevel())

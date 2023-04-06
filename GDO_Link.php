@@ -66,7 +66,7 @@ final class GDO_Link extends GDO
 	{
 		return [
 			GDT_AutoInc::make('link_id'),
-			GDT_LinkUrl::make('link_url')->allowAll(),
+			GDT_LinkUrl::make('link_url')->allowAll()->notNull(),
 			GDT_LinkTitle::make('link_title'),
 			GDT_Language::make('link_lang')->emptyInitial(t('no_special_language')),
 			GDT_LinkDescription::make('link_description'),

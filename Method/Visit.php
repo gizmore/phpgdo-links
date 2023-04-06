@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 namespace GDO\Links\Method;
 
 use GDO\Core\GDT;
@@ -30,7 +31,7 @@ final class Visit extends Method
 		$level = $link->getLevel();
 		if ($level > $user->getLevel())
 		{
-			return $this->error('err_link_level', [$level])->addField(GDT_Redirect::hrefBack());
+			return $this->error('err_link_level', [$level])->addField(GDT_Redirect::make()->back());
 		}
 
 		$link->increase('link_views');
