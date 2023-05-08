@@ -2,6 +2,7 @@
 declare(strict_types=1);
 namespace GDO\Links\Method;
 
+use GDO\Core\GDO_DBException;
 use GDO\Core\GDT;
 use GDO\Core\GDT_Object;
 use GDO\Core\Method;
@@ -24,6 +25,9 @@ final class Visit extends Method
 		];
 	}
 
+	/**
+	 * @throws GDO_DBException
+	 */
 	public function execute(): GDT
 	{
 		$link = $this->getLink();
@@ -31,11 +35,9 @@ final class Visit extends Method
 		$level = $link->getLevel();
 		if ($level > $user->getLevel())
 		{
-			return $this->error('err_link_level', [$level])->addField(GDT_Redirect::make()->back());
+			return $this->redirectError('err_link_level', [$level]);
 		}
-
 		$link->increase('link_views');
-
 		return $this->redirect($link->getURL());
 	}
 
