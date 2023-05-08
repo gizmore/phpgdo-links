@@ -17,7 +17,7 @@ final class Add extends MethodForm
 
 	public function isUserRequired(): bool { return true; }
 
-	public function createForm(GDT_Form $form): void
+	protected function createForm(GDT_Form $form): void
 	{
 		$table = GDO_Link::table();
 		$module = Module_Links::instance();
