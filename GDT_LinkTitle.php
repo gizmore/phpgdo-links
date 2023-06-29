@@ -26,7 +26,8 @@ final class GDT_LinkTitle extends GDT_Title
 
 	public function isTestable(): bool { return false; }
 
-	public function defaultLabel(): self { return $this->label('title'); }
+	public function gdtDefaultLabel(): ?string
+    { return 'title'; }
 
 	public function renderHTML(): string
 	{
